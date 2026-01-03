@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             GroupBoxSetariAlg = new GroupBox();
             numRataMutatie = new NumericUpDown();
             numGeneratie = new NumericUpDown();
@@ -362,13 +361,6 @@
             chartPareto.ChartAreas.Add(chartArea1);
             chartPareto.Location = new Point(6, 30);
             chartPareto.Name = "chartPareto";
-            series1.ChartArea = "ChartArea1";
-            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Point;
-            series1.Color = Color.FromArgb(0, 192, 192);
-            series1.MarkerSize = 8;
-            series1.MarkerStyle = System.Windows.Forms.DataVisualization.Charting.MarkerStyle.Circle;
-            series1.Name = "Series1";
-            chartPareto.Series.Add(series1);
             chartPareto.Size = new Size(1034, 348);
             chartPareto.TabIndex = 0;
             chartPareto.Text = "Grafic Rezultate";
