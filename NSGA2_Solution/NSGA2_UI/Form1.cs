@@ -75,7 +75,7 @@ namespace NSGA2_UI
                 ShowError("Rata de Mutatie trebuie sa fie intre 0 si 99!");
                 return;
             }
-            
+
             chartPareto.Series[0].Points.Clear();
             Application.DoEvents();
 
@@ -116,6 +116,13 @@ namespace NSGA2_UI
 
                 // desenare Punct
                 DataPoint punct = new DataPoint(acceleratie, range);
+                string info = $"SOLUTIA #{i + 1}\n" +
+                $"Motor: {populatie[i].putere_motor:F0} CP\n" +
+                $"Rezervor: {populatie[i].capacitate_rezervor:F0} L\n" +
+                $"Roti: {populatie[i].dimensiune_roti:F0}\n" +
+                $"Accel: {populatie[i].acceleratie:F2} s\n" +
+                $"Range: {populatie[i].autonomie_range:F0} km";
+                punct.ToolTip = info;
                 chartPareto.Series[0].Points.Add(punct);
 
             }
@@ -128,12 +135,10 @@ namespace NSGA2_UI
             for (int i = 0; i < num_populatie; i++)
             {
                 membriPopulatie = membriPopulatie + $"Motor: {populatie[i].putere_motor:F0} CP; Rezervor: {populatie[i].capacitate_rezervor:F0} L; Roti: {populatie[i].dimensiune_roti:F0};" +
-                    $"Accel: {populatie[i].acceleratie:F2} s\nRange: {populatie[i].autonomie_range:F0} km \n";
-
+                    $"Accel: {populatie[i].acceleratie:F2} s; Range: {populatie[i].autonomie_range:F0} km ;" + "\r\n";              
             }
             Cursor = Cursors.Default;
-            MessageBox.Show(membriPopulatie, "Membri populatie", MessageBoxButtons.OK, MessageBoxIcon.Question,
-                                   MessageBoxDefaultButton.Button1, 0);
+            ShowScrollableMessage("Lista Membri Populatie", membriPopulatie);
 
             // ===============NSGA-II==========================
 
@@ -207,11 +212,11 @@ namespace NSGA2_UI
                 fronturi.Add(F1);
 
                 // hardcodare max 20 fronturi
-                for (int i=1;i<21;i++)
+                for (int i = 1; i < 21; i++)
                 {
-                    fronturi.Add(Individ.buildFront(fronturi[i-1], populatie_totala));
+                    fronturi.Add(Individ.buildFront(fronturi[i - 1], populatie_totala));
                 }
-                
+
 
                 // calculare crowding distance
                 foreach (var front in fronturi)
@@ -281,18 +286,50 @@ namespace NSGA2_UI
             {
 
                 DataPoint punct = new DataPoint(populatie[i].acceleratie, populatie[i].autonomie_range);
+                string info = $"SOLUTIA OPTIMA #{i + 1}\n" +
+                  $"Motor: {populatie[i].putere_motor:F0} CP\n" +
+                  $"Rezervor: {populatie[i].capacitate_rezervor:F0} L\n" +
+                  $"Roti: {populatie[i].dimensiune_roti:F0}\n" +
+                  $"Accel: {populatie[i].acceleratie:F2} s\n" +
+                  $"Range: {populatie[i].autonomie_range:F0} km";
 
+                punct.ToolTip = info;
                 punct.MarkerStyle = MarkerStyle.Star5;
                 punct.MarkerSize = 12;
                 punct.Color = Color.Red;
 
                 chartPareto.Series[0].Points.Add(punct);
                 resultListBox.Items.Add(resultListBox.Items.Count + 1 + ". Accel: " + populatie[i].acceleratie.ToString("F2") + " s - Range: " + populatie[i].autonomie_range.ToString("F0") + " km");
-            }  
+            }
 
         }
 
 
+        private void ShowScrollableMessage(string titlu, string mesajLung)
+        {
+            Form fereastra = new Form();
+            fereastra.Text = titlu;
+            fereastra.Size = new Size(500, 400);
+            fereastra.StartPosition = FormStartPosition.CenterParent;
+            fereastra.MinimizeBox = false;
+            fereastra.MaximizeBox = false;
+
+            TextBox txtMesaj = new TextBox();
+            txtMesaj.Multiline = true;
+            txtMesaj.ScrollBars = ScrollBars.Vertical;
+            txtMesaj.ReadOnly = true;
+            txtMesaj.Dock = DockStyle.Fill;
+            txtMesaj.Font = new Font("Consolas", 10);
+            txtMesaj.Text = mesajLung;
+
+
+            txtMesaj.SelectionStart = 0;
+            txtMesaj.SelectionLength = 0;
+
+
+            fereastra.Controls.Add(txtMesaj);
+            fereastra.ShowDialog();
+        }
         private void ShowError(string mesaj)
         {
             MessageBox.Show(mesaj, "Eroare Parametri", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -300,17 +337,18 @@ namespace NSGA2_UI
 
         private void chartPareto_Click(object sender, EventArgs e)
         {
+            MouseEventArgs me = (MouseEventArgs)e;
+            HitTestResult result = chartPareto.HitTest(me.X, me.Y);
 
+            if (result.ChartElementType == ChartElementType.DataPoint)
+            {
+                var punctLovis = chartPareto.Series[0].Points[result.PointIndex];
+
+                MessageBox.Show(punctLovis.ToolTip,
+                                "Detalii Solutie Selectata",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Information);
+            }
         }
-        private void resultsLabel_Click(object sender, EventArgs e)
-        {
-
-        }
-        private void numericUpDown1_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
-        
-
     }
 }
