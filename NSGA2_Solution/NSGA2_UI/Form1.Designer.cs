@@ -86,97 +86,85 @@
             GroupBoxSetariAlg.Controls.Add(labelMutatie);
             GroupBoxSetariAlg.Controls.Add(numPopulatie);
             GroupBoxSetariAlg.Controls.Add(labelMarimePop);
-            GroupBoxSetariAlg.Location = new Point(8, 7);
-            GroupBoxSetariAlg.Margin = new Padding(2);
+            GroupBoxSetariAlg.Location = new Point(11, 12);
             GroupBoxSetariAlg.Name = "GroupBoxSetariAlg";
-            GroupBoxSetariAlg.Padding = new Padding(2);
-            GroupBoxSetariAlg.Size = new Size(491, 82);
+            GroupBoxSetariAlg.Size = new Size(701, 137);
             GroupBoxSetariAlg.TabIndex = 0;
             GroupBoxSetariAlg.TabStop = false;
             GroupBoxSetariAlg.Text = "Setari Algoritm";
             // 
             // numRezultateDorite
             // 
-            numRezultateDorite.Location = new Point(369, 38);
-            numRezultateDorite.Margin = new Padding(2);
+            numRezultateDorite.Location = new Point(527, 63);
             numRezultateDorite.Maximum = new decimal(new int[] { 50, 0, 0, 0 });
             numRezultateDorite.Minimum = new decimal(new int[] { 1, 0, 0, 0 });
             numRezultateDorite.Name = "numRezultateDorite";
-            numRezultateDorite.Size = new Size(109, 23);
+            numRezultateDorite.Size = new Size(156, 31);
             numRezultateDorite.TabIndex = 7;
             numRezultateDorite.Value = new decimal(new int[] { 10, 0, 0, 0 });
-            numRezultateDorite.ValueChanged += numericUpDown1_ValueChanged;
             // 
             // resultsLabel
             // 
             resultsLabel.AutoSize = true;
-            resultsLabel.Location = new Point(369, 22);
-            resultsLabel.Margin = new Padding(2, 0, 2, 0);
+            resultsLabel.Location = new Point(527, 37);
             resultsLabel.Name = "resultsLabel";
-            resultsLabel.Size = new Size(109, 15);
+            resultsLabel.Size = new Size(165, 25);
             resultsLabel.TabIndex = 6;
             resultsLabel.Text = "Nr. Rezultate Dorite";
-            resultsLabel.Click += resultsLabel_Click;
             // 
             // numRataMutatie
             // 
-            numRataMutatie.Location = new Point(248, 38);
-            numRataMutatie.Margin = new Padding(2);
+            numRataMutatie.Location = new Point(354, 63);
             numRataMutatie.Minimum = new decimal(new int[] { 5, 0, 0, 0 });
             numRataMutatie.Name = "numRataMutatie";
-            numRataMutatie.Size = new Size(99, 23);
+            numRataMutatie.Size = new Size(141, 31);
             numRataMutatie.TabIndex = 3;
             numRataMutatie.Value = new decimal(new int[] { 10, 0, 0, 0 });
             // 
             // numGeneratie
             // 
-            numGeneratie.Location = new Point(132, 38);
-            numGeneratie.Margin = new Padding(2);
+            numGeneratie.Location = new Point(189, 63);
             numGeneratie.Maximum = new decimal(new int[] { 500, 0, 0, 0 });
             numGeneratie.Minimum = new decimal(new int[] { 50, 0, 0, 0 });
             numGeneratie.Name = "numGeneratie";
-            numGeneratie.Size = new Size(99, 23);
+            numGeneratie.Size = new Size(141, 31);
             numGeneratie.TabIndex = 5;
             numGeneratie.Value = new decimal(new int[] { 50, 0, 0, 0 });
             // 
             // labelNrGeneratii
             // 
             labelNrGeneratii.AutoSize = true;
-            labelNrGeneratii.Location = new Point(132, 22);
-            labelNrGeneratii.Margin = new Padding(2, 0, 2, 0);
+            labelNrGeneratii.Location = new Point(189, 37);
             labelNrGeneratii.Name = "labelNrGeneratii";
-            labelNrGeneratii.Size = new Size(73, 15);
+            labelNrGeneratii.Size = new Size(109, 25);
             labelNrGeneratii.TabIndex = 4;
             labelNrGeneratii.Text = "Nr. Generatii";
             // 
             // labelMutatie
             // 
             labelMutatie.AutoSize = true;
-            labelMutatie.Location = new Point(248, 22);
-            labelMutatie.Margin = new Padding(2, 0, 2, 0);
+            labelMutatie.Location = new Point(354, 37);
             labelMutatie.Name = "labelMutatie";
-            labelMutatie.Size = new Size(92, 15);
+            labelMutatie.Size = new Size(137, 25);
             labelMutatie.TabIndex = 2;
             labelMutatie.Text = "Rata Mutatie(%)";
             // 
             // numPopulatie
             // 
-            numPopulatie.Location = new Point(18, 38);
-            numPopulatie.Margin = new Padding(2);
+            numPopulatie.Location = new Point(26, 63);
             numPopulatie.Maximum = new decimal(new int[] { 1000, 0, 0, 0 });
             numPopulatie.Minimum = new decimal(new int[] { 10, 0, 0, 0 });
             numPopulatie.Name = "numPopulatie";
-            numPopulatie.Size = new Size(99, 23);
+            numPopulatie.Size = new Size(141, 31);
             numPopulatie.TabIndex = 1;
             numPopulatie.Value = new decimal(new int[] { 100, 0, 0, 0 });
             // 
             // labelMarimePop
             // 
             labelMarimePop.AutoSize = true;
-            labelMarimePop.Location = new Point(18, 22);
-            labelMarimePop.Margin = new Padding(2, 0, 2, 0);
+            labelMarimePop.Location = new Point(26, 37);
             labelMarimePop.Name = "labelMarimePop";
-            labelMarimePop.Size = new Size(101, 15);
+            labelMarimePop.Size = new Size(150, 25);
             labelMarimePop.TabIndex = 0;
             labelMarimePop.Text = "Marime Populatie";
             // 
@@ -194,11 +182,9 @@
             groupBoxLParamMasina.Controls.Add(labelPutereMotor);
             groupBoxLParamMasina.Controls.Add(labelRezervor);
             groupBoxLParamMasina.Controls.Add(labelRoti);
-            groupBoxLParamMasina.Location = new Point(503, 16);
-            groupBoxLParamMasina.Margin = new Padding(2);
+            groupBoxLParamMasina.Location = new Point(719, 27);
             groupBoxLParamMasina.Name = "groupBoxLParamMasina";
-            groupBoxLParamMasina.Padding = new Padding(2);
-            groupBoxLParamMasina.Size = new Size(425, 140);
+            groupBoxLParamMasina.Size = new Size(607, 233);
             groupBoxLParamMasina.TabIndex = 1;
             groupBoxLParamMasina.TabStop = false;
             groupBoxLParamMasina.Text = "Limite Parametri Masina";
@@ -206,126 +192,114 @@
             // labelLinie2
             // 
             labelLinie2.AutoSize = true;
-            labelLinie2.Location = new Point(202, 52);
-            labelLinie2.Margin = new Padding(2, 0, 2, 0);
+            labelLinie2.Location = new Point(289, 87);
             labelLinie2.Name = "labelLinie2";
-            labelLinie2.Size = new Size(22, 15);
+            labelLinie2.Size = new Size(33, 25);
             labelLinie2.TabIndex = 14;
             labelLinie2.Text = "---";
             // 
             // labelLinie3
             // 
             labelLinie3.AutoSize = true;
-            labelLinie3.Location = new Point(202, 85);
-            labelLinie3.Margin = new Padding(2, 0, 2, 0);
+            labelLinie3.Location = new Point(289, 142);
             labelLinie3.Name = "labelLinie3";
-            labelLinie3.Size = new Size(22, 15);
+            labelLinie3.Size = new Size(33, 25);
             labelLinie3.TabIndex = 13;
             labelLinie3.Text = "---";
             // 
             // labelLinie
             // 
             labelLinie.AutoSize = true;
-            labelLinie.Location = new Point(202, 22);
-            labelLinie.Margin = new Padding(2, 0, 2, 0);
+            labelLinie.Location = new Point(289, 37);
             labelLinie.Name = "labelLinie";
-            labelLinie.Size = new Size(22, 15);
+            labelLinie.Size = new Size(33, 25);
             labelLinie.TabIndex = 12;
             labelLinie.Text = "---";
             // 
             // numPutereMotorMax
             // 
-            numPutereMotorMax.Location = new Point(230, 20);
-            numPutereMotorMax.Margin = new Padding(2);
+            numPutereMotorMax.Location = new Point(329, 33);
             numPutereMotorMax.Maximum = new decimal(new int[] { 300, 0, 0, 0 });
             numPutereMotorMax.Minimum = new decimal(new int[] { 100, 0, 0, 0 });
             numPutereMotorMax.Name = "numPutereMotorMax";
-            numPutereMotorMax.Size = new Size(66, 23);
+            numPutereMotorMax.Size = new Size(94, 31);
             numPutereMotorMax.TabIndex = 11;
             numPutereMotorMax.Value = new decimal(new int[] { 300, 0, 0, 0 });
             // 
             // numRezervorMax
             // 
-            numRezervorMax.Location = new Point(230, 52);
-            numRezervorMax.Margin = new Padding(2);
+            numRezervorMax.Location = new Point(329, 87);
             numRezervorMax.Maximum = new decimal(new int[] { 80, 0, 0, 0 });
             numRezervorMax.Minimum = new decimal(new int[] { 40, 0, 0, 0 });
             numRezervorMax.Name = "numRezervorMax";
-            numRezervorMax.Size = new Size(66, 23);
+            numRezervorMax.Size = new Size(94, 31);
             numRezervorMax.TabIndex = 10;
             numRezervorMax.Value = new decimal(new int[] { 80, 0, 0, 0 });
             // 
             // numRotiMin
             // 
-            numRotiMin.Location = new Point(132, 85);
-            numRotiMin.Margin = new Padding(2);
+            numRotiMin.Location = new Point(189, 142);
             numRotiMin.Maximum = new decimal(new int[] { 22, 0, 0, 0 });
             numRotiMin.Minimum = new decimal(new int[] { 15, 0, 0, 0 });
             numRotiMin.Name = "numRotiMin";
-            numRotiMin.Size = new Size(66, 23);
+            numRotiMin.Size = new Size(94, 31);
             numRotiMin.TabIndex = 9;
             numRotiMin.Value = new decimal(new int[] { 15, 0, 0, 0 });
             // 
             // numRotiMax
             // 
-            numRotiMax.Location = new Point(230, 85);
-            numRotiMax.Margin = new Padding(2);
+            numRotiMax.Location = new Point(329, 142);
             numRotiMax.Maximum = new decimal(new int[] { 22, 0, 0, 0 });
             numRotiMax.Minimum = new decimal(new int[] { 15, 0, 0, 0 });
             numRotiMax.Name = "numRotiMax";
-            numRotiMax.Size = new Size(66, 23);
+            numRotiMax.Size = new Size(94, 31);
             numRotiMax.TabIndex = 8;
             numRotiMax.Value = new decimal(new int[] { 22, 0, 0, 0 });
             // 
             // numRezervorMin
             // 
-            numRezervorMin.Location = new Point(132, 52);
-            numRezervorMin.Margin = new Padding(2);
+            numRezervorMin.Location = new Point(189, 87);
             numRezervorMin.Maximum = new decimal(new int[] { 80, 0, 0, 0 });
             numRezervorMin.Minimum = new decimal(new int[] { 40, 0, 0, 0 });
             numRezervorMin.Name = "numRezervorMin";
-            numRezervorMin.Size = new Size(66, 23);
+            numRezervorMin.Size = new Size(94, 31);
             numRezervorMin.TabIndex = 7;
             numRezervorMin.Value = new decimal(new int[] { 40, 0, 0, 0 });
             // 
             // numPutereMotMin
             // 
-            numPutereMotMin.Location = new Point(132, 20);
-            numPutereMotMin.Margin = new Padding(2);
+            numPutereMotMin.Location = new Point(189, 33);
             numPutereMotMin.Maximum = new decimal(new int[] { 300, 0, 0, 0 });
             numPutereMotMin.Minimum = new decimal(new int[] { 100, 0, 0, 0 });
             numPutereMotMin.Name = "numPutereMotMin";
-            numPutereMotMin.Size = new Size(66, 23);
+            numPutereMotMin.Size = new Size(94, 31);
             numPutereMotMin.TabIndex = 6;
             numPutereMotMin.Value = new decimal(new int[] { 100, 0, 0, 0 });
             // 
             // labelPutereMotor
             // 
             labelPutereMotor.AutoSize = true;
-            labelPutereMotor.Location = new Point(12, 22);
-            labelPutereMotor.Margin = new Padding(2, 0, 2, 0);
+            labelPutereMotor.Location = new Point(17, 37);
             labelPutereMotor.Name = "labelPutereMotor";
-            labelPutereMotor.Size = new Size(103, 15);
+            labelPutereMotor.Size = new Size(153, 25);
             labelPutereMotor.TabIndex = 5;
             labelPutereMotor.Text = "Putere Motor(Cp):";
             // 
             // labelRezervor
             // 
             labelRezervor.AutoSize = true;
-            labelRezervor.Location = new Point(12, 53);
-            labelRezervor.Margin = new Padding(2, 0, 2, 0);
+            labelRezervor.Location = new Point(17, 88);
             labelRezervor.Name = "labelRezervor";
-            labelRezervor.Size = new Size(83, 15);
+            labelRezervor.Size = new Size(122, 25);
             labelRezervor.TabIndex = 4;
             labelRezervor.Text = "Rezervor(Litri):";
             // 
             // labelRoti
             // 
             labelRoti.AutoSize = true;
-            labelRoti.Location = new Point(12, 86);
-            labelRoti.Margin = new Padding(2, 0, 2, 0);
+            labelRoti.Location = new Point(17, 143);
             labelRoti.Name = "labelRoti";
-            labelRoti.Size = new Size(57, 15);
+            labelRoti.Size = new Size(84, 25);
             labelRoti.TabIndex = 3;
             labelRoti.Text = "Roti(dm):";
             // 
@@ -333,11 +307,9 @@
             // 
             groupBoxComenzi.Controls.Add(labelStatus);
             groupBoxComenzi.Controls.Add(buttonStart);
-            groupBoxComenzi.Location = new Point(8, 92);
-            groupBoxComenzi.Margin = new Padding(2);
+            groupBoxComenzi.Location = new Point(11, 153);
             groupBoxComenzi.Name = "groupBoxComenzi";
-            groupBoxComenzi.Padding = new Padding(2);
-            groupBoxComenzi.Size = new Size(491, 64);
+            groupBoxComenzi.Size = new Size(701, 107);
             groupBoxComenzi.TabIndex = 2;
             groupBoxComenzi.TabStop = false;
             groupBoxComenzi.Text = "Comenzi";
@@ -346,10 +318,9 @@
             // 
             labelStatus.AutoSize = true;
             labelStatus.ForeColor = Color.DimGray;
-            labelStatus.Location = new Point(160, 27);
-            labelStatus.Margin = new Padding(2, 0, 2, 0);
+            labelStatus.Location = new Point(229, 45);
             labelStatus.Name = "labelStatus";
-            labelStatus.Size = new Size(110, 15);
+            labelStatus.Size = new Size(167, 25);
             labelStatus.TabIndex = 1;
             labelStatus.Text = " Status: Asteptare ...";
             // 
@@ -358,10 +329,9 @@
             buttonStart.BackColor = Color.Lime;
             buttonStart.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             buttonStart.ForeColor = Color.FromArgb(0, 64, 0);
-            buttonStart.Location = new Point(4, 18);
-            buttonStart.Margin = new Padding(2);
+            buttonStart.Location = new Point(6, 30);
             buttonStart.Name = "buttonStart";
-            buttonStart.Size = new Size(139, 33);
+            buttonStart.Size = new Size(199, 55);
             buttonStart.TabIndex = 0;
             buttonStart.Text = "START";
             buttonStart.UseVisualStyleBackColor = false;
@@ -371,11 +341,9 @@
             // 
             groupBoxRezultate.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             groupBoxRezultate.Controls.Add(chartPareto);
-            groupBoxRezultate.Location = new Point(8, 160);
-            groupBoxRezultate.Margin = new Padding(2);
+            groupBoxRezultate.Location = new Point(11, 267);
             groupBoxRezultate.Name = "groupBoxRezultate";
-            groupBoxRezultate.Padding = new Padding(2);
-            groupBoxRezultate.Size = new Size(924, 230);
+            groupBoxRezultate.Size = new Size(1320, 383);
             groupBoxRezultate.TabIndex = 3;
             groupBoxRezultate.TabStop = false;
             groupBoxRezultate.Text = "Rezultate";
@@ -392,10 +360,9 @@
             chartArea1.AxisY.Title = "Range";
             chartArea1.Name = "ChartArea1";
             chartPareto.ChartAreas.Add(chartArea1);
-            chartPareto.Location = new Point(4, 18);
-            chartPareto.Margin = new Padding(2);
+            chartPareto.Location = new Point(6, 30);
             chartPareto.Name = "chartPareto";
-            chartPareto.Size = new Size(916, 209);
+            chartPareto.Size = new Size(1309, 348);
             chartPareto.TabIndex = 0;
             chartPareto.Text = "Grafic Rezultate";
             chartPareto.Click += chartPareto_Click;
@@ -404,11 +371,9 @@
             // 
             groupBoxTopRezultate.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             groupBoxTopRezultate.Controls.Add(resultListBox);
-            groupBoxTopRezultate.Location = new Point(950, 7);
-            groupBoxTopRezultate.Margin = new Padding(2);
+            groupBoxTopRezultate.Location = new Point(1357, 12);
             groupBoxTopRezultate.Name = "groupBoxTopRezultate";
-            groupBoxTopRezultate.Padding = new Padding(2);
-            groupBoxTopRezultate.Size = new Size(228, 380);
+            groupBoxTopRezultate.Size = new Size(326, 633);
             groupBoxTopRezultate.TabIndex = 4;
             groupBoxTopRezultate.TabStop = false;
             groupBoxTopRezultate.Text = "Top Rezultate";
@@ -416,25 +381,25 @@
             // resultListBox
             // 
             resultListBox.FormattingEnabled = true;
-            resultListBox.ItemHeight = 15;
-            resultListBox.Location = new Point(5, 22);
+            resultListBox.ItemHeight = 25;
+            resultListBox.Location = new Point(7, 37);
+            resultListBox.Margin = new Padding(4, 5, 4, 5);
             resultListBox.Name = "resultListBox";
-            resultListBox.Size = new Size(218, 349);
+            resultListBox.Size = new Size(310, 579);
             resultListBox.TabIndex = 0;
             resultListBox.Visible = false;
             // 
             // Form1
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             AutoSize = true;
-            ClientSize = new Size(1187, 398);
+            ClientSize = new Size(1696, 663);
             Controls.Add(groupBoxTopRezultate);
             Controls.Add(groupBoxRezultate);
             Controls.Add(groupBoxComenzi);
             Controls.Add(groupBoxLParamMasina);
             Controls.Add(GroupBoxSetariAlg);
-            Margin = new Padding(2);
             Name = "Form1";
             Text = "Form1";
             GroupBoxSetariAlg.ResumeLayout(false);
