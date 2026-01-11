@@ -206,8 +206,8 @@ namespace NSGA2_UI
                 }
                 fronturi.Add(F1);
 
-                // hardcodare max 20 fronturi
-                for (int i=1;i<21;i++)
+                // hardcodare max 40 fronturi
+                for (int i=1;i<40;i++)
                 {
                     fronturi.Add(Individ.buildFront(fronturi[i-1], populatie_totala));
                 }
